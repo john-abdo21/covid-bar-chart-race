@@ -229,7 +229,7 @@ function createBarChartRace(data) {
     };
   }
 
-  formatDate = d3.utcFormat("%Y");
+  formatDate = d3.utcFormat("%B %d, %Y");
 
   color = (function () {
     const scale = d3.scaleOrdinal(d3.schemeTableau10);

@@ -29,7 +29,7 @@ function createBarChartRace(data) {
   n = 10;
   height = margin.top + barSize * n + margin.bottom;
   width = height * 1.5;
-  duration = 200;
+  duration = 100;
 
   names = new Set(data.map((d) => d.name));
   datevalues = Array.from(
@@ -229,7 +229,7 @@ function createBarChartRace(data) {
     };
   }
 
-  formatDate = d3.utcFormat("%B %d, %Y");
+  formatDate = d3.utcFormat("%B %Y");
 
   color = (function () {
     const scale = d3.scaleOrdinal(d3.schemeTableau10);

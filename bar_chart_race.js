@@ -225,9 +225,10 @@ function createBarChartRace(data) {
       .text(formatDate(keyframes[0][0]));
 
     return ([date], transition) => {
-      transition.end().then(() => now.text(formatDate(date));
+      transition.end().then(() => now.text(formatDate(date)));
     };
   }
+  
 formatDate = d3.utcFormat("%B %d, %Y");
 
   color = (function () {

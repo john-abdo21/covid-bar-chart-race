@@ -29,7 +29,7 @@ function createBarChartRace(data) {
   n = 10;
   height = margin.top + barSize * n + margin.bottom;
   width = height * 1.5;
-  duration = 175;
+  duration = 200;
 
   names = new Set(data.map((d) => d.name));
   datevalues = Array.from(
@@ -225,7 +225,7 @@ function createBarChartRace(data) {
       .text(formatDate(keyframes[0][0]));
 
     return ([date], transition) => {
-      transition.end().then(() => now.text(formatDate(date)));
+      transition.end().then(() => now.text(formatDate(date));
     };
   }
   

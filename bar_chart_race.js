@@ -29,7 +29,7 @@ function createBarChartRace(data) {
   n = 10;
   height = margin.top + barSize * n + margin.bottom;
   width = height * 1.5;
-  duration = 150;
+  duration = 175;
 
   names = new Set(data.map((d) => d.name));
   datevalues = Array.from(
@@ -225,10 +225,10 @@ function createBarChartRace(data) {
       .text(formatDate(keyframes[0][0]));
 
     return ([date], transition) => {
-      transition.end().then(() => now.text(formatDate(parseDate(date)));
+      transition.end().then(() => now.text(formatDate(date));
     };
   }
-formatDate = d3.time.format("%b-%Y");
+formatDate = d3.utcFormat("%B %d, %Y");
 
   color = (function () {
     const scale = d3.scaleOrdinal(d3.schemeTableau10);

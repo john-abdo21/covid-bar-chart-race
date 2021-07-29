@@ -225,11 +225,11 @@ function createBarChartRace(data) {
       .text(formatDate(keyframes[0][0]));
 
     return ([date], transition) => {
-      transition.end().then(() => now.text(formatDate(date)));
+      transition.end().then(() => now.text(formatDate(new Date)));
     };
   }
 
-  formatDate = d3.utcFormat("%Y");
+  formatDate = d3.utcFormat("%M %Y");
 
   color = (function () {
     const scale = d3.scaleOrdinal(d3.schemeTableau10);
